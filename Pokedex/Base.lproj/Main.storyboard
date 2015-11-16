@@ -5,6 +5,11 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="pokemonFont.ttf">
+            <string>PokemonSolidNormal</string>
+        </mutableArray>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -24,13 +29,56 @@
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pD9-hj-wIT">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="55"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pokedex" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jfq-Bz-AnP">
+                                        <rect key="frame" x="239" y="8" width="123" height="39"/>
+                                        <animations/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="39" id="i7w-FF-xEx"/>
+                                            <constraint firstAttribute="width" constant="123" id="lYX-9u-UMY"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="PokemonSolidNormal" family="Pokemon Solid" pointSize="28"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pve-4A-YK9">
+                                        <rect key="frame" x="565" y="17" width="27" height="22"/>
+                                        <animations/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="38" id="43A-sp-dav"/>
+                                            <constraint firstAttribute="height" constant="30" id="5yh-Lv-b6p"/>
+                                            <constraint firstAttribute="width" constant="27" id="d9U-CD-tV1"/>
+                                            <constraint firstAttribute="height" constant="22" id="xdz-Lm-z9u"/>
+                                        </constraints>
+                                        <state key="normal" title="Button" image="volume@1x"/>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="43A-sp-dav"/>
+                                                <exclude reference="5yh-Lv-b6p"/>
+                                            </mask>
+                                        </variation>
+                                        <connections>
+                                            <action selector="volumeButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="C42-Kc-FXh"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
                                 <animations/>
                                 <color key="backgroundColor" red="1" green="0.34509803921568627" blue="0.33333333333333331" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
+                                    <constraint firstItem="jfq-Bz-AnP" firstAttribute="centerX" secondItem="pD9-hj-wIT" secondAttribute="centerX" id="3c3-qg-QpS"/>
+                                    <constraint firstAttribute="trailing" secondItem="Pve-4A-YK9" secondAttribute="trailing" constant="8" id="9yl-wR-gHD"/>
                                     <constraint firstAttribute="height" constant="55" id="KgE-lA-GDN"/>
+                                    <constraint firstItem="Pve-4A-YK9" firstAttribute="top" secondItem="pD9-hj-wIT" secondAttribute="top" constant="17" id="hdM-Zv-Rx9"/>
+                                    <constraint firstItem="jfq-Bz-AnP" firstAttribute="centerY" secondItem="pD9-hj-wIT" secondAttribute="centerY" id="wG2-Us-apW"/>
+                                    <constraint firstItem="Pve-4A-YK9" firstAttribute="top" secondItem="pD9-hj-wIT" secondAttribute="top" constant="13" id="zQj-tL-1UB"/>
                                 </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="zQj-tL-1UB"/>
+                                    </mask>
+                                </variation>
                             </view>
-                            <searchBar contentMode="redraw" ambiguous="YES" misplaced="YES" searchBarStyle="minimal" translatesAutoresizingMaskIntoConstraints="NO" id="Tzc-f9-jMR">
+                            <searchBar userInteractionEnabled="NO" contentMode="redraw" ambiguous="YES" misplaced="YES" searchBarStyle="minimal" translatesAutoresizingMaskIntoConstraints="NO" id="Tzc-f9-jMR">
                                 <rect key="frame" x="0.0" y="55" width="600" height="44"/>
                                 <animations/>
                                 <textInputTraits key="textInputTraits"/>
@@ -53,7 +101,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="110" height="110"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="297" translatesAutoresizingMaskIntoConstraints="NO" id="vVK-nb-Ney">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="104" translatesAutoresizingMaskIntoConstraints="NO" id="vVK-nb-Ney">
                                                     <rect key="frame" x="0.0" y="0.0" width="110" height="87"/>
                                                     <animations/>
                                                 </imageView>
@@ -122,11 +170,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="245" y="317"/>
+            <point key="canvasLocation" x="111" y="394"/>
         </scene>
     </scenes>
     <resources>
-        <image name="297" width="120" height="120"/>
+        <image name="104" width="120" height="120"/>
         <image name="bg" width="1920" height="1200"/>
+        <image name="volume@1x" width="306" height="288"/>
     </resources>
 </document>
