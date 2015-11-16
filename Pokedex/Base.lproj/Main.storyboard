@@ -78,7 +78,7 @@
                                     </mask>
                                 </variation>
                             </view>
-                            <searchBar userInteractionEnabled="NO" contentMode="redraw" ambiguous="YES" misplaced="YES" searchBarStyle="minimal" translatesAutoresizingMaskIntoConstraints="NO" id="Tzc-f9-jMR">
+                            <searchBar contentMode="redraw" ambiguous="YES" misplaced="YES" searchBarStyle="minimal" placeholder="Search for Pokemon" translatesAutoresizingMaskIntoConstraints="NO" id="Tzc-f9-jMR">
                                 <rect key="frame" x="0.0" y="55" width="600" height="44"/>
                                 <animations/>
                                 <textInputTraits key="textInputTraits"/>
@@ -166,6 +166,7 @@
                     </view>
                     <connections>
                         <outlet property="collection" destination="5jM-Bs-piD" id="XyV-IL-VSd"/>
+                        <outlet property="searchBar" destination="Tzc-f9-jMR" id="TFQ-N1-RZc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
