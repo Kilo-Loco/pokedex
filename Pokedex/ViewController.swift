@@ -93,6 +93,16 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     }
     
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+     
+        let poke: Pokemon!
+        
+        if self.inSearchMode {
+            poke = self.filteredPokemon[indexPath.row]
+        } else {
+            poke = self.pokemon[indexPath.row]
+        }
+
+        performSegueWithIdentifier("PokemonDetailVC", sender: poke)
         
     }
     
@@ -146,6 +156,16 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             
             self.filteredPokemon = pokemon.filter({$0.name.rangeOfString(lower) != nil})
             self.collection.reloadData()
+        }
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "PokemonDetailVC" {
+            if let detailsVC = segue.destinationViewController as? PokemonDetailVC {
+                if let poke = sender as? Pokemon {
+                    detailsVC.pokemon = poke
+                }
+            }
         }
     }
     
