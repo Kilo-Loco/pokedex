@@ -24,33 +24,53 @@ class PokemonDetailVC: UIViewController {
     @IBOutlet weak var currentEvoImg: UIImageView!
     @IBOutlet weak var nextEvoImg: UIImageView!
     
-
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.nameLbl.text = self.pokemon.name
+        self.nameLbl.text = self.pokemon.name.capitalizedString
+        
+        let img = UIImage(named: "\(pokemon.pokedexId)")
+        self.mainImg.image = img
+        self.currentEvoImg.image = img
+        
+        self.pokemon.downloadPokemonDetails { () -> () in
+            self.updateUI()
+        }
+    }
+    
+    func updateUI() {
+        self.descriptionLbl.text = pokemon.description
+        self.typeLbl.text = pokemon.type
+        self.attackLbl.text = pokemon.attack
+        self.heightLbl.text = pokemon.height
+        self.pokedexLbl.text = "\(pokemon.pokedexId)"
+        self.weightLbl.text = pokemon.weight
+        self.defenseLbl.text = pokemon.defense
+        
+        if self.pokemon.nextEvolutionId == "" {
+            self.evoLbl.text = "No Evolutions"
+            self.nextEvoImg.hidden = true
+        } else {
+            self.nextEvoImg.hidden = false
+            self.nextEvoImg.image = UIImage(named: self.pokemon.nextEvolutionId)
+            var str = "Next Evolution: \(self.pokemon.nextEvolutionTxt)"
+            
+            if self.pokemon.nextEvolutionLvl != "" {
+                str += " - LVL \(self.pokemon.nextEvolutionLvl)"
+                self.evoLbl.text = str
+            }
+        }
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     @IBAction func backBtnPressed(sender: AnyObject) {
         dismissViewControllerAnimated(true, completion: nil)
     }
 
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    override func prefersStatusBarHidden() -> Bool {
+        return true
     }
-    */
-
 }

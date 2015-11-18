@@ -256,7 +256,7 @@
                                         <animations/>
                                         <constraints>
                                             <constraint firstAttribute="width" relation="lessThanOrEqual" constant="100" id="EfT-gr-K3G"/>
-                                            <constraint firstAttribute="height" relation="lessThanOrEqual" constant="100" id="Hab-9W-Eec"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="75" id="Hab-9W-Eec"/>
                                         </constraints>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="6" translatesAutoresizingMaskIntoConstraints="NO" id="ISP-uc-2aH">
@@ -281,8 +281,8 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mVk-tw-YPp" userLabel="evolutionBar">
                                 <rect key="frame" x="0.0" y="455" width="600" height="29"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Next Evolution: Charizard LVL 36" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ssM-RB-l7w">
-                                        <rect key="frame" x="191" y="6" width="218" height="18"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Special Evolution" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ssM-RB-l7w">
+                                        <rect key="frame" x="242" y="6" width="116" height="18"/>
                                         <animations/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Italic" family="Helvetica Neue" pointSize="15"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -359,7 +359,7 @@
                                                         <color key="textColor" red="0.96470588235294119" green="0.24705882352941178" blue="0.26666666666666666" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fire / Dragon" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RI6-eU-6fB">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fire / Dragon" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="RI6-eU-6fB">
                                                         <rect key="frame" x="0.0" y="27" width="187" height="24"/>
                                                         <animations/>
                                                         <constraints>
@@ -398,11 +398,11 @@
                                         </subviews>
                                         <animations/>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="zHr-Ib-91m" userLabel="heightID">
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="zHr-Ib-91m" userLabel="heightID">
                                         <rect key="frame" x="0.0" y="307" width="560" height="20"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Height:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aPE-Lj-DjU">
-                                                <rect key="frame" x="0.0" y="0.0" width="140" height="20"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="90" height="20"/>
                                                 <animations/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="90" id="kZI-4s-FTc"/>
@@ -412,7 +412,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="71" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IUj-KD-5Co">
-                                                <rect key="frame" x="140" y="0.0" width="140" height="20"/>
+                                                <rect key="frame" x="90" y="0.0" width="40" height="20"/>
                                                 <animations/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="20" id="3Ps-Mb-dad"/>
@@ -423,10 +423,10 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pokedex ID:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="atH-fS-MMh">
-                                                <rect key="frame" x="280" y="0.0" width="140" height="20"/>
+                                                <rect key="frame" x="130" y="0.0" width="100" height="20"/>
                                                 <animations/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="90" id="3vV-LQ-n52"/>
+                                                    <constraint firstAttribute="width" constant="100" id="3vV-LQ-n52"/>
                                                     <constraint firstAttribute="height" constant="20" id="fPA-lV-fLh"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
@@ -434,7 +434,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="718" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UbN-of-wzs">
-                                                <rect key="frame" x="420" y="0.0" width="140" height="20"/>
+                                                <rect key="frame" x="230" y="0.0" width="330" height="20"/>
                                                 <animations/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="40" id="KDZ-Ws-jD8"/>
@@ -447,11 +447,11 @@
                                         </subviews>
                                         <animations/>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="ZC2-MJ-reK" userLabel="weightDefense">
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="ZC2-MJ-reK" userLabel="weightDefense">
                                         <rect key="frame" x="0.0" y="352" width="560" height="20"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Weight:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nd6-Go-u5V">
-                                                <rect key="frame" x="0.0" y="0.0" width="140" height="20"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="90" height="20"/>
                                                 <animations/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="90" id="SQ4-Yo-GFi"/>
@@ -462,7 +462,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="71" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kg8-dR-7bc">
-                                                <rect key="frame" x="140" y="0.0" width="140" height="20"/>
+                                                <rect key="frame" x="90" y="0.0" width="40" height="20"/>
                                                 <animations/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="20" id="8ph-lL-9qh"/>
@@ -473,7 +473,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Defense:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Omd-J0-dGr">
-                                                <rect key="frame" x="280" y="0.0" width="140" height="20"/>
+                                                <rect key="frame" x="130" y="0.0" width="90" height="20"/>
                                                 <animations/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="20" id="KFd-EC-7sm"/>
@@ -484,7 +484,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="71" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YVb-0w-xU7">
-                                                <rect key="frame" x="420" y="0.0" width="140" height="20"/>
+                                                <rect key="frame" x="220" y="0.0" width="340" height="20"/>
                                                 <animations/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="20" id="QgQ-Dl-WKD"/>
