@@ -10,6 +10,8 @@ import UIKit
 import AVFoundation
 
 class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UISearchBarDelegate {
+    
+    @IBOutlet weak var circleDec: UIView!
 
     @IBOutlet weak var collection: UICollectionView!
     
@@ -24,6 +26,9 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        sel
+        
         self.collection.delegate = self
         self.collection.dataSource = self
         self.searchBar.delegate = self
